@@ -5,16 +5,15 @@ import by.itacademy.taf_pizza.page.BasePage;
 import by.itacademy.taf_pizza.page.DodoPizzaPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.WebDriver;
+
 public class BaseTest {
-    protected WebDriver driver = Driver.getDriver();
-    protected BasePage basePage = new BasePage(driver);
-    protected DodoPizzaPage dodoPizzaPage = new DodoPizzaPage(driver);
-    private static final String URL = "https://dodopizza.by/";
+    protected BasePage basePage = new BasePage();
+    protected DodoPizzaPage dodoPizzaPage = new DodoPizzaPage();
+
 
     @BeforeEach
     void setUp() {
-        basePage.open(URL);
+        basePage.open();
         dodoPizzaPage.clickToCloseCookie();
     }
 
