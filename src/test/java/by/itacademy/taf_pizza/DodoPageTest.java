@@ -5,26 +5,23 @@ import by.itacademy.taf_pizza.step.Steps;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.ElementClickInterceptedException;
-
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class DodoPageTest extends BaseTest {
-    private static Steps steps;
+    DodoPizzaPage dodoPizzaPage = new DodoPizzaPage();
 
     @Test
     void testAddPizzaFourSeasonToBucketAndCheck() {
-        steps = new Steps();
+        Steps steps = new Steps();
         steps.addPizzaFourSeasonToBucketWithoutDelivery();
-        String actual = dodoPizzaPage.getNameFourSeasonPizza();
-        String expected = DodoPizzaPage.FOUR_SEASON;
 
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(DodoPizzaPage.FOUR_SEASON, dodoPizzaPage.getNameFourSeasonPizza());
     }
 
     @Test
     void testFillFormWithIncorrectData() {
         assertThrows(ElementClickInterceptedException.class, () -> {
-            steps = new Steps();
+            Steps steps = new Steps();
             steps.addPizzaFourSeasonToBucketWithDelivery();
         });
     }

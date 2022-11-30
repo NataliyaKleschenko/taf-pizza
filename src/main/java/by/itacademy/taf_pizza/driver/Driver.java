@@ -11,9 +11,6 @@ import static by.itacademy.taf_pizza.constants.Constant.IMPLICITLY_WAIT;
 public class Driver {
     private static WebDriver driver;
 
-    private Driver() {
-    }
-
     public static WebDriver getDriver() {
         if (driver == null) {
             WebDriverManager.chromedriver()

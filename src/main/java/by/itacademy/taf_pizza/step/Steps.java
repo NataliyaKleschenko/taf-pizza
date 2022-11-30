@@ -2,14 +2,11 @@ package by.itacademy.taf_pizza.step;
 
 import by.itacademy.taf_pizza.page.DodoPizzaPage;
 
-public class Steps {
+public class Steps extends DodoPizzaPage{
     private static DodoPizzaPage dodoPizzaPage;
 
-    public Steps() {
-    }
-
     public Steps addPizzaFourSeasonToBucket() {
-        dodoPizzaPage = new DodoPizzaPage();
+       dodoPizzaPage = new DodoPizzaPage();
         dodoPizzaPage.clickOnPizzaMenu()
                 .clickButtonToChooseFourSeasonPizza()
                 .clickFourSeasonPizzaBigSize()
@@ -35,7 +32,7 @@ public class Steps {
     }
 
     public void fillFormWithIncorrectData() {
-        dodoPizzaPage = new DodoPizzaPage();
+       dodoPizzaPage = new DodoPizzaPage();
         dodoPizzaPage.typeNameOfStreet();
         dodoPizzaPage.typeEntranceNumber();
         dodoPizzaPage.typeFloorNumber();

@@ -26,7 +26,7 @@ public class BasePage {
         driver.navigate().to(URL);
     }
 
-    public WebElement waitElementIsVisible(WebElement element) {
+    protected WebElement waitElementIsVisible(WebElement element) {
         new WebDriverWait(driver, Duration.ofSeconds(WAIT_FOR_ELEMENT)).until(ExpectedConditions.visibilityOf(element));
         return element;
     }
