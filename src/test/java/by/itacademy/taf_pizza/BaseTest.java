@@ -10,7 +10,7 @@ public class BaseTest {
     void setUp() {
         DodoPizzaPage dodoPizzaPage = new DodoPizzaPage();
         dodoPizzaPage.open();
-        dodoPizzaPage.clickToCloseCookie();
+
     }
 
     @AfterEach

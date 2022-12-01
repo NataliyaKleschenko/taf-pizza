@@ -16,6 +16,8 @@ public class Steps extends DodoPizzaPage{
 
     public Steps addPizzaFourSeasonToBucketWithoutDelivery() {
         dodoPizzaPage = new DodoPizzaPage();
+        dodoPizzaPage.clickToSelectCity();
+        dodoPizzaPage.clickToCloseCookie();
         addPizzaFourSeasonToBucket();
         dodoPizzaPage.clickOnRadioButtonToPickUpPizzaFromPizzeria()
                 .clickSubmitAfterSelectingLocation()
@@ -25,6 +27,7 @@ public class Steps extends DodoPizzaPage{
 
     public Steps addPizzaFourSeasonToBucketWithDelivery() {
         dodoPizzaPage = new DodoPizzaPage();
+        dodoPizzaPage.clickToSelectCity();
         addPizzaFourSeasonToBucket();
         dodoPizzaPage.clickToSpecifyTheDeliveryAddress();
         fillFormWithIncorrectData();
