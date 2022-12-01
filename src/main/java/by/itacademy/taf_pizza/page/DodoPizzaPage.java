@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class DodoPizzaPage extends BasePage {
+    private final By GOMEL_LOCATOR = By.xpath("//a[@href='/gomel']");
     private final By PIZZAS_MENU_LOCATOR = By.xpath("//*[@id='react-app']/nav/div/ul/li[1]/a");
     private final By PIZZA_FOUR_SEASONS_LOCATOR = By.xpath("//article[@data-testid='menu__meta-product_000D3A262427A94911E8A4BF330E7060']/footer/button");
     private final By DODO_PIZZA_PAGE_CLOSE_COOKIE_LOCATOR = By.className("cookie-policy__button");
@@ -32,12 +33,17 @@ public class DodoPizzaPage extends BasePage {
         return this;
     }
 
+    public void clickToSelectCity() {
+        clickOnElement(GOMEL_LOCATOR);
+    }
+
     public void clickToCloseCookie() {
         clickOnElement(DODO_PIZZA_PAGE_CLOSE_COOKIE_LOCATOR);
     }
 
     public DodoPizzaPage clickButtonToChooseFourSeasonPizza() {
-        clickOnElement(PIZZA_FOUR_SEASONS_LOCATOR);
+        WebElement fourSeasonPizza = driver.findElement(PIZZA_FOUR_SEASONS_LOCATOR);
+        waitElementIsVisible(fourSeasonPizza).click();
         return this;
     }
 
