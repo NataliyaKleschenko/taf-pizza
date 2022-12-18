@@ -6,21 +6,21 @@ import org.openqa.selenium.WebElement;
 
 public class DodoPizzaPage extends BasePage {
     private final By GOMEL_LOCATOR = By.xpath("//a[@href='/gomel']");
-    private final By PIZZAS_MENU_LOCATOR = By.xpath("//*[@id='react-app']/nav/div/ul/li[1]/a");
-    private final By PIZZA_FOUR_SEASONS_LOCATOR = By.xpath("//article[@data-testid='menu__meta-product_000D3A262427A94911E8A4BF330E7060']/footer/button");
+    private final By PIZZAS_MENU_LOCATOR = By.xpath("//html/body/div[3]/nav/div/ul/li[1]/a");
+    private final By PIZZA_FOUR_SEASONS_LOCATOR = By.xpath("//section[@id=\"pizzas\"]//article[@data-testid=\"menu__meta-product_000D3A262427A94911E8A4BF330E7060\"]");
     private final By DODO_PIZZA_PAGE_CLOSE_COOKIE_LOCATOR = By.className("cookie-policy__button");
     private final By PIZZA_FOUR_SEASONS_BIG_SIZE_LOCATOR = By.xpath("//label[3]");
     private final By ADD_SELECTED_PIZZA_TO_BUCKET_LOCATOR = By.xpath("//div[2]/div[2]/button");
     private final By PICK_UP_PIZZA_FROM_PIZZERIA_RADIO_BUTTON_LOCATOR = By.xpath("//button[contains(text(), 'Забрать из')]");
     private final By SPECIFY_THE_DELIVERY_ADDRESS_LOCATOR = By.xpath("//button[contains(text(), 'Указать адрес')]");
-    private final By STREET_INPUT_LOCATOR = By.xpath("//div[@class='sc-1qbfx43-0 bimGIS']//input");
-    private final By ENTRANCE_INPUT_LOCATOR = By.xpath("//div[@class='sc-1qbfx43-0 bimGIS control-medium']//input[@id='animated-input-2']");
-    private final By FLOOR_INPUT_LOCATOR = By.xpath("//div[@class='sc-1qbfx43-0 bimGIS control-medium']//input[@id='animated-input-3']");
-    private final By APARTMENT_INPUT_LOCATOR = By.xpath("//div[@class='sc-1qbfx43-0 bimGIS control-medium']//input[@id='animated-input-4']");
-    private final By CODE_INPUT_LOCATOR = By.xpath("//div[@class='sc-1qbfx43-0 bimGIS control-medium']//input[@id='animated-input-5']");
+    private final By STREET_INPUT_LOCATOR = By.xpath("//form//input[@id='animated-input-1']");
+    private final By ENTRANCE_INPUT_LOCATOR = By.xpath("//form//input[@id='animated-input-2']");
+    private final By FLOOR_INPUT_LOCATOR = By.xpath("//form//input[@id='animated-input-3']");
+    private final By APARTMENT_INPUT_LOCATOR = By.xpath("//form//input[@id='animated-input-4']");
+    private final By CODE_INPUT_LOCATOR = By.xpath("//form//input[@id='animated-input-5']");
     private final By SUBMIT_DELIVERY_ADDRESS_LOCATOR = By.xpath("//button[@class='sc-1rmt3mq-0 cpUbDl submit-button']");
     private final By SUBMIT_GOMEL_1_LOCATOR = By.xpath("//button[@class='sc-1rmt3mq-0 cpUbDl submit-button']");
-    private final By BUCKET_LOCATOR = By.xpath("//button[@class='sc-1rmt3mq-0 cpUbDl xlo7eb-10 ieYvah']");
+    private final By BUCKET_LOCATOR = By.xpath("//div[@class='xlo7eb-3 dQDTpi']//button[@data-testid=\"navigation__cart\"]");
     private final By FOUR_SEASON_NAME = By.xpath("//h3[@class='qt41kr-5 cGnUch']");
     public static final String FOUR_SEASON = "Четыре сезона";
 

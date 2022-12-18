@@ -8,10 +8,11 @@ import org.openqa.selenium.ElementClickInterceptedException;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class DodoPageTest extends BaseTest {
-    DodoPizzaPage dodoPizzaPage = new DodoPizzaPage();
+    DodoPizzaPage dodoPizzaPage;
 
     @Test
     void testAddPizzaFourSeasonToBucketAndCheck() {
+        dodoPizzaPage = new DodoPizzaPage();
         Steps steps = new Steps();
         steps.addPizzaFourSeasonToBucketWithoutDelivery();
 
@@ -21,6 +22,7 @@ public class DodoPageTest extends BaseTest {
     @Test
     void testFillFormWithIncorrectData() {
         assertThrows(ElementClickInterceptedException.class, () -> {
+            dodoPizzaPage = new DodoPizzaPage();
             Steps steps = new Steps();
             steps.addPizzaFourSeasonToBucketWithDelivery();
         });
